@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block contentme %}
+
+<h2>Are you sure you want to delete the following:</h2>
+<div class="alert alert-danger">
+    <p><strong>{{ title }}</strong></p>
+</div>
+
+<form method="post">{% csrf_token %}
+
+    <button class="btn btn-danger">Yes delete</button>
+
+</form>
+{% endblock%} 

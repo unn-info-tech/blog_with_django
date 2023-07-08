@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contentme %}
+
+<h1>{{ title }}</h1>
+
+{% for i in qs %}
+    {% include "blog/list_inline.html" with blog=i %}
+{% endfor %}
+
+
+{% endblock %}

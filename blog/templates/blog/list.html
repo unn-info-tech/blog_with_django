@@ -3,7 +3,7 @@
 
 <div class="row">
     {% for i in object_listme %}
-        {% include "blog/list_inline.html" with blog=i%}
+        {% include "blog/list_inline.html" with blog=i truncate=True detail=False %}
     {% endfor %}
 </div>
 {% endblock %} 

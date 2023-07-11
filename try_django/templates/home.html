@@ -4,7 +4,7 @@
 <h1>{{ title }}</h1>
 
 {% for i in qs %}
-    {% include "blog/list_inline.html" with blog=i %}
+    {% include "blog/list_inline.html" with blog=i truncate=True detail=False %}
 {% endfor %}
 
 

@@ -4,8 +4,17 @@
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">{{ blog.titleModels}}</h5>
-        <p class="card-text">{{ blog.contentModels}}</p>
-
+        <p class="card-text">
+            {% if truncate %} 
+                {{ blog.contentModels | linebreaks | truncatewords:30}}
+            {% else %}
+                {{ blog.contentModels | linebreaks }}
+            {% endif %}
+        
+        </p>
+        {% if not detail %}
+            <a href="{{ blog.get_absolute_url }}">View</a>
+        {% endif %}
     </div>
 </div>
 </div>
